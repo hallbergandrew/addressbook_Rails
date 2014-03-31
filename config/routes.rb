@@ -1,4 +1,5 @@
 AddressBook::Application.routes.draw do
+  match('/', {:via => :get, :to => 'contacts#index'})
   match('contacts', {:via => :get, :to => 'contacts#index'})
   match('contacts', {:via => :post, :to => 'contacts#create'})
   match('contacts/new', {:via => :get, :to => 'contacts#new'})
